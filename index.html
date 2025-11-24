@@ -9,81 +9,133 @@ http://localhost:5500/index.html
 <meta charset="utf-8">
 <html>
     <title>Las Fosas Comunes de Andalucia</title>
- 
-<header id="menu">
-    <ul>
-        <li><a href="#Sevilla">Sevilla</a></li>
-            <ul>
-                <li><a href="#FosaCasariche">Fosa de Casariche</a></li>
-            </ul>
-        <li><a href="#Cordoba">Córdoba</a></li>
-            <ul>
-                <li><a href="#FosaFuenteObejuna">Fosa de Fuente Obejuna</a></li>
-            </ul>
-        <li><a href="#Malaga">Málaga</a></li>
-            <ul>
-                <li><a href="#FosaYunquera">Fosa de Yunquera</a></li>
-            </ul>
-        <li><a href="#Cadiz">Cádiz</a></li>
-            <ul>
-                <li><a href="#FosaSanJosedelValle">Fosa de San José del Valle</a></li>
-            </ul>
-        <li><a href="#Granada">Granada</a></li>
-            <ul>
-                <li><a href="#FosaPolopos">Fosa de Polopos</a></li>
-            </ul>
-        <li><a href="#Jaen">Jaén</a></li>
-            <ul>
-                <li><a href="#FosaVillacarrillo">Fosa de Villacarrillo</a></li>
-            </ul>
-        <li><a href="#Almeria">Almería</a></li>
-            <ul>
-                <li><a href="#Fosa2Almeria">Fosa 2 de Almería</a></li>
-            </ul>
-        <li><a href="#Huelva">Huelva</a></li>
-            <ul>
-                <li><a href="#FosaArroyomolinos">Fosa de Arroyomolinos de León</a></li>
-            </ul>
-    </ul>
-</header>
-<nav id="desplegable">
-    <ul>
-        <li><a href="#Sevilla">Sevilla</a></li>
-            <ul>
-                <li><a href="#FosaCasariche">Fosa de Casariche</a></li>
-            </ul>
-        <li><a href="#Cordoba">Córdoba</a></li>
-            <ul>
-                <li><a href="#FosaFuenteObejuna">Fosa de Fuente Obejuna</a></li>
-            </ul>
-        <li><a href="#Malaga">Málaga</a></li>
-            <ul>
-                <li><a href="#FosaYunquera">Fosa de Yunquera</a></li>
-            </ul>
-        <li><a href="#Cadiz">Cádiz</a></li>
-            <ul>
-                <li><a href="#FosaSanJosedelValle">Fosa de San José del Valle</a></li>
-            </ul>
-        <li><a href="#Granada">Granada</a></li>
-            <ul>
-                <li><a href="#FosaPolopos">Fosa de Polopos</a></li>
-            </ul>
-        <li><a href="#Jaen">Jaén</a></li>
-            <ul>
-                <li><a href="#FosaVillacarrillo">Fosa de Villacarrillo</a></li>
-            </ul>
-        <li><a href="#Almeria">Almería</a></li>
-            <ul>
-                <li><a href="#Fosa2Almeria">Fosa 2 de Almería</a></li>
-            </ul>
-        <li><a href="#Huelva">Huelva</a></li>
-            <ul>
-                <li><a href="#FosaArroyomolinos">Fosa de Arroyomolinos de León</a></li>
-            </ul>
-    </ul>
-</nav>
+
 
     <body>
+<header>
+    <nav id="menu">
+        <ul class="menu">
+
+            <li>
+                <a href="#Sevilla">Sevilla</a>
+                <ul class="submenu">
+                    <li><a href="#FosaCasariche">Fosa de Casariche</a></li>
+                </ul>
+            </li>
+
+
+            <li>
+                <a href="#Cordoba">Córdoba</a>
+                <ul class="submenu">
+                    <li><a href="#FosaFuenteObejuna">Fosa de Fuente Obejuna</a></li>
+                </ul>
+            </li>
+            
+           
+            <li>
+                <a href="#Malaga">Málaga</a>
+                <ul class="submenu">
+                    <li><a href="#FosaYunquera">Fosa de Yunquera</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="#Cadiz">Cádiz</a>
+                <ul class="submenu">
+                    <li><a href="#FosaSanJosedelValle">Fosa de San José del Valle</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="#Granada">Granada</a>
+                <ul class="submenu">
+                    <li><a href="#FosaPolopos">Fosa de Polopos</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="#Jaen">Jaén</a>
+                <ul class="submenu">
+                    <li><a href="#FosaVillacarrillo">Fosa de Villacarrillo</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="#Almeria">Almería</a>
+                <ul class="submenu">
+                    <li><a href="#Fosa2Almeria">Fosa 2 de Almería</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="#Huelva">Huelva</a>
+                <ul class="submenu">
+                    <li><a href="#FosaArroyomolinos">Fosa de Arroyomolinos de León</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+        <button class="openbtn" onclick="toggleNav()">☰ Abrir Menú</button>
+
+    <!-- Contenedor del menú lateral (sidebar) -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">× Cerrar</a>
+        
+        <nav id="desplegable">
+            <ul class="main-menu">
+                <li>
+                    <a href="#Sevilla">Sevilla</a>
+                    <ul class="submenu">
+                        <li><a href="#FosaCasariche">Fosa de Casariche</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#Cordoba">Córdoba</a>
+                    <ul class="submenu">
+                        <li><a href="#FosaFuenteObejuna">Fosa de Fuente Obejuna</a></li>
+                    </ul>
+                </li>
+                <!-- El resto de elementos siguen la misma estructura anidada -->
+                <li>
+                    <a href="#Malaga">Málaga</a>
+                    <ul class="submenu">
+                        <li><a href="#FosaYunquera">Fosa de Yunquera</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#Cadiz">Cádiz</a>
+                    <ul class="submenu">
+                        <li><a href="#FosaSanJosedelValle">Fosa de San José del Valle</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#Granada">Granada</a>
+                    <ul class="submenu">
+                        <li><a href="#FosaPolopos">Fosa de Polopos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#Jaen">Jaén</a>
+                    <ul class="submenu">
+                        <li><a href="#FosaVillacarrillo">Fosa de Villacarrillo</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#Almeria">Almería</a>
+                    <ul class="submenu">
+                        <li><a href="#Fosa2Almeria">Fosa 2 de Almería</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#Huelva">Huelva</a>
+                    <ul class="submenu">
+                        <li><a href="#FosaArroyomolinos">Fosa de Arroyomolinos de León</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
         <h1 id="tituloGeneral">Fosas Comunes de Andalucía</h1>
         <div class="bloque" id="intro">
             <p>En Andalucía, España, existen numerosas fosas comunes que datan de la Guerra Civil Española (1936-1939) y la posterior dictadura franquista. Estas fosas contienen los restos de miles de personas que fueron víctimas de ejecuciones extrajudiciales y represalias políticas durante y después del conflicto. Muchas de estas fosas permanecen sin identificar y sin exhumar, lo que ha generado un debate sobre la memoria histórica y la justicia para las víctimas y sus familias.</p>
@@ -94,12 +146,15 @@ http://localhost:5500/index.html
         <h2 class="tituloFosas" id="Sevilla">Fosas de Sevilla</h2>
 
         <div class="bloque sevilla" >
-            <h2 id="FosaCasariche">Fosa de Casariche</h2>
+            <div class="contenedorTitulo">
+                <h2 id="FosaCasariche">Fosa de Casariche</h2>
+            </div>
+            
         
-           <!-- <div class="imagen">
+            <div class="imagen">
                 <img src="">
-            </div>-->
-            <div>
+            </div>
+            <div class="contenedorCeldas">
                 <p class="celda fecha">1936</p> 
                 <p class="celda ">La fosa del antiguo cementerio de Casariche, hoy convertido en parque, fue exhumada en los años 60-70 para trasladar los restos al nuevo cementerio y ya no existe.</p>
                 <p class="celda ">Casariche fue ocupado el 31 de julio de 1936 junto con Herrera, sin sufrir una represión intensa.
@@ -133,8 +188,9 @@ http://localhost:5500/index.html
         <h2 class="tituloFosas" id="Malaga">Fosas de Málaga</h2>
 
         <div class="bloque malaga" >
-            <h2 id="#FosaYunquera">Fosa de Yunquera</h2>
-            
+            <div class="contenedorTitulo">
+                <h2 id="FosaYunquera">Fosa de Yunquera</h2>
+            </div>
             <!-- <div class="imagen">
                 <img src="">
             </div> -->
@@ -157,8 +213,9 @@ http://localhost:5500/index.html
         <h2 class="tituloFosas" id="Cadiz">Fosas de Cádiz</h2>
 
         <div class="bloque cadiz">
+            <div class="">
             <h2 id="FosaSanJosedelValle">Fosa de San José del Valle</h2>
-            
+            </div>
             <!-- <div class="imagen">
                 <img src="">
             </div> -->
@@ -177,8 +234,9 @@ http://localhost:5500/index.html
         <h2 class="tituloFosas" id="Granada">Fosas de Granada</h2>
 
         <div class="bloque granada">
+            <div class="contenedorTitulo">
             <h2 id="FosaPolopos">Fosa de Polopos</h2>
-            
+            </div>
             <!-- <div class="imagen">
                 <img src="">
             </div> -->
@@ -193,12 +251,13 @@ http://localhost:5500/index.html
             </div>
         </div>
         
-
+        
         <h2 class="tituloFosas" id="Jaen">Fosas de Jaén</h2>
         
         <div class="bloque jaen">
+            <div class="contenedorTitulo">
             <h2 id="FosaVillacarrillo">Fosa de Villacarrillo</h2>
-            
+            </div>
             <!-- <div class="imagen">
                 <img src="">
             </div> -->
@@ -211,12 +270,13 @@ http://localhost:5500/index.html
                 <a class="celda URL" href ="https://desaparicionforzadadeandalucia.org/cartografia-desapariciones-forzadas-andalucia/fosa-de-villacarrillo-jaen/">URL</a> 
             </div>
         </div>
-
+        
         <h2 class="tituloFosas" id="Almeria">Fosas de Almería</h2>
         
         <div class="bloque almeria">
+            <div class="contenedorTitulo">
             <h2 id="#Fosa2Almeria">Fosa 2 de Almería</h2>
-            
+            </div>
             <!-- <div class="imagen">
                 <img src="">
             </div> -->
@@ -229,12 +289,13 @@ http://localhost:5500/index.html
                 <a class="celda URL" href ="https://desaparicionforzadadeandalucia.org/cartografia-desapariciones-forzadas-andalucia/fosa-2-del-cementerio-de-almeria/?perpage=12&order=ASC&orderby=meta_value&metakey=9324&pos=64&source_list=collection&ref=%2Fcartografia-desapariciones-forzadas-andalucia%2F">URL</a> 
             </div>
         </div>
-
+        
         <h2 class="tituloFosas" id="Huelva">Fosas de Huelva</h2>
-
+        
         <div class="bloque huelva">
+            <div class="contenedorTitulo">
             <h2 id="FosaArroyomolinos">Fosa de Arroyomolinos de León</h2>
-            
+            </div>
             <!-- <div class="imagen">
                 <img src="">
             </div> -->

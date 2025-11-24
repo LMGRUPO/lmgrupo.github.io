@@ -17,6 +17,23 @@ html{
     padding-right: 30px;
     border: 5px solid black;
     
+    display: flex;
+    flex-direction: column;
+}
+.contenedorTitulo{
+    align-self: flex-start;
+    width: 90%;
+}
+.contenedorCeldas{
+    align-self: flex-end;
+}
+.imagen{
+    height: 100px;
+    width: 100%;
+    background-color: black;
+
+    
+    align-items: flex-end;
 }
 #intro{
     background-color: black;
@@ -29,22 +46,12 @@ html{
 .celda{
     text-align: right;
     background-color: rgb(54, 51, 51);
-    /* flex: 1 1 45%; */
     color: white;
-    /*display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items:;*/
-    margin-left:60%;
+    margin: 5%;
     margin-bottom: 5%;
     margin-top: 5%;
 }
-.imagen{
-    margin-top: 500px;
-    height: 100px;
-    width: 100%;
-    background-color: black;
-}
+
 .fecha{
     font-size: 30px;
     font-weight: 800;
@@ -81,7 +88,7 @@ html{
     background-image: url(Banderas/BanderaGranada.png);
 }
 .tituloFosas{
-    text-align: center;
+    text-align:center;
     font-size: 70px;
     background-color: purple;
     font-style: italic;
@@ -100,81 +107,144 @@ h2{
 p{
     padding: 5%;
 }
-/* -menu-
-
-#menu ul {
- list-style:none;
- margin:0;
- padding:0;
+ul {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
 }
 
- -items del menu- 
-
-#menu ul li {
- background-color:#2e518b;
+a {
+    text-decoration: none; 
+    color: white;
+    padding: 10px 15px;
+    display: block;
 }
 
- -enlaces del menu- 
 
-#menu ul a {
- display:block;
- color:#fff;
- text-decoration:none;
- font-weight:400;
- font-size:15px;
- padding:10px;
- font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
- text-transform:uppercase;
- letter-spacing:1px;
+header {
+    background-color: #333;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
- -items del menu- 
-
-#menu ul li {
- position:relative;
- float:left;
- margin:0;
- padding:0;
+.menu {
+    display: flex; 
+    justify-content: center;
 }
 
- -efecto al pasar el ratón por los items del menu- 
-
-#menu ul li:hover {
- background:#5b78a7;
+.menu > li {
+    position: relative; 
 }
 
- -menu desplegable -
-
-#menu ul ul {
- display:none;
- position:absolute;
- top:100%;
- left:0;
- background:#eee;
- padding:0;
+.menu li a:hover {
+    background-color: #555;
 }
 
- -items del menu desplegable- 
 
-#menu ul ul li {
- float:none;
- width:150px
+
+.submenu {
+    display: none; 
+    position: absolute;
+    background-color: #444;
+    min-width: 200px; 
+    z-index: 1000; 
+    left: 0;
 }
 
- -enlaces de los items del menu desplegable -
 
-#menu ul ul a {
- line-height:120%;
- padding:10px 15px;
+.menu li:hover > .submenu {
+    display: block;
 }
 
- -items del menu desplegable al pasar el ratón- 
 
-#menu ul li:hover > ul {
- display:block;
+.submenu li {
+    width: 100%; 
 }
-*/
 
+.submenu li a:hover {
+    background-color: #666;
+}
+body {
+    font-family: "Lato", sans-serif;
+    transition: margin-left .5s; /* Suaviza el movimiento del contenido principal */
+}
+
+/* Estilos del menú lateral */
+.sidebar {
+    height: 100%;
+    width: 0; /* Ancho 0 por defecto (oculto) */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden; /* Oculta el scroll horizontal */
+    transition: 0.5s; /* Suaviza la animación de apertura/cierre */
+    padding-top: 60px;
+}
+
+/* Estilos de los enlaces principales */
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+    background-color: #555;
+}
+
+/* Botón de cierre (la X en la esquina superior) */
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px !important; /* Importante para que sea grande */
+    margin-left: 50px;
+}
+
+/* Botón para abrir (la pestaña lateral) */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: fixed; /* Se queda fijo en la pantalla */
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+/* Estilos para el contenido principal (se mueve cuando se abre el menú) */
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+/* Estilos para los submenús dentro del sidebar */
+.main-menu {
+    padding-top: 20px;
+}
+
+.submenu {
+    padding-left: 20px;
+    /* Los submenus internos ya están visibles por defecto dentro del sidebar */
+}
+
+.submenu a {
+    font-size: 16px;
+    color: #bbb;
+}
 footer{
 background: blueviolet;
 color: white;  
