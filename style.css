@@ -107,144 +107,204 @@ h2{
 p{
     padding: 5%;
 }
+
+
 ul {
-    list-style: none; 
+    list-style: none;
     margin: 0;
     padding: 0;
+    
 }
 
 a {
-    text-decoration: none; 
+    text-decoration: none;
     color: white;
-    padding: 10px 15px;
     display: block;
+    padding: 10px 15px;
 }
-
 
 header {
     background-color: #333;
     color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .menu {
-    display: flex; 
-    justify-content: center;
+    display: flex;
+    border: black solid 5px;
 }
-
+.visual{
+    border: black solid 2px;
+    text-align: center;
+    padding: 2em;
+}
 .menu > li {
-    position: relative; 
+    position: relative;
+    flex-grow: 1; 
 }
 
 .menu li a:hover {
     background-color: #555;
 }
 
+.submenuarriba {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 200px;
+    z-index: 1000;
+    left: 0;
+    padding-left: 30px;
+    border: black solid 5px;
+}
 
+.menu li:hover > .submenuarriba {
+    display: block;
+}
+
+
+.submenuarriba li {
+    width: 100%;
+}
+
+.submenuarriba li a {
+    padding: 8px 12px;
+}
+
+.submenuarriba li a:hover {
+    background-color: #666;
+}  
+
+.menu-toggle-btn {
+    position: fixed;
+    top: 50%; 
+    left: -40px; 
+    transform: translateY(-50%); 
+    z-index: 2000;
+    width: 40px; 
+    height: 40px; 
+    background-color: #555; 
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 7px;
+    border-radius: 0 5px 5px 0;
+    transition: left 0.3s ease-in-out;
+}
+
+.menu-toggle-btn.is-visible {
+    left: 0px;
+}
+
+.menu-toggle-btn .bar {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: white; 
+    border-radius: 1px;
+}
+
+.menu-lateral {
+    z-index: 1500;
+    position: fixed; 
+    height: 100%; 
+    left: -200px;
+    transition: left 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.menu-lateral.is-active {
+    left: 0; 
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1400;
+    display: none;
+}
+.menu-overlay.is-active {
+    display: block;
+}
+
+.menudesplegable {
+    background-color: #222; 
+    color: white;
+    border: 1px solid #000; 
+    width: 200px;
+    height: 26%;
+}
+
+.menudesplegable > li {
+    position: relative;
+    text-align: left; 
+    border-bottom: 1px solid #000; 
+}
+
+.menudesplegable > li:last-child {
+    border-bottom: none;
+}
+
+
+.menudesplegable a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px 15px; 
+}
+
+.menudesplegable > li > a {
+    position: relative; 
+    padding-right: 25px; 
+}
+
+.menudesplegable > li > a::after {
+    content: " ►"; 
+    position: absolute;
+    right: 10px; 
+    font-size: 0.8em;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menudesplegable a:hover {
+    background-color: #444; 
+}
 
 .submenu {
     display: none; 
     position: absolute;
-    background-color: #444;
-    min-width: 200px; 
-    z-index: 1000; 
-    left: 0;
+    background-color: #222; 
+    left: 100%;
+    top: -1px; 
+    min-width: 200px;
+    border: 5px solid #000;
+    list-style: none; 
+    padding-left: 30px;
+
 }
 
-
-.menu li:hover > .submenu {
+.menudesplegable li:hover > .submenu {
     display: block;
 }
 
-
-.submenu li {
-    width: 100%; 
+.submenu li a {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #000; 
+}
+.submenu li:last-child a {
+    border-bottom: none;
 }
 
 .submenu li a:hover {
-    background-color: #666;
-}
-body {
-    font-family: "Lato", sans-serif;
-    transition: margin-left .5s; /* Suaviza el movimiento del contenido principal */
+    background-color: #333; 
 }
 
-/* Estilos del menú lateral */
-.sidebar {
-    height: 100%;
-    width: 0; /* Ancho 0 por defecto (oculto) */
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden; /* Oculta el scroll horizontal */
-    transition: 0.5s; /* Suaviza la animación de apertura/cierre */
-    padding-top: 60px;
-}
-
-/* Estilos de los enlaces principales */
-.sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidebar a:hover {
-    color: #f1f1f1;
-    background-color: #555;
-}
-
-/* Botón de cierre (la X en la esquina superior) */
-.closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px !important; /* Importante para que sea grande */
-    margin-left: 50px;
-}
-
-/* Botón para abrir (la pestaña lateral) */
-.openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #111;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    position: fixed; /* Se queda fijo en la pantalla */
-    top: 15px;
-    left: 15px;
-    z-index: 2;
-}
-
-.openbtn:hover {
-    background-color: #444;
-}
-
-/* Estilos para el contenido principal (se mueve cuando se abre el menú) */
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
-}
-
-/* Estilos para los submenús dentro del sidebar */
-.main-menu {
-    padding-top: 20px;
-}
-
-.submenu {
-    padding-left: 20px;
-    /* Los submenus internos ya están visibles por defecto dentro del sidebar */
-}
-
-.submenu a {
-    font-size: 16px;
-    color: #bbb;
-}
 footer{
 background: blueviolet;
 color: white;  

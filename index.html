@@ -6,136 +6,144 @@ http://localhost:5500/index.html
 -->
 <!Doctype html>
 <link rel="stylesheet" href="style.css">
+<script src="overlay.js" defer></script>
 <meta charset="utf-8">
 <html>
     <title>Las Fosas Comunes de Andalucia</title>
 
 
     <body>
-<header>
+<header id="main-header">
     <nav id="menu">
         <ul class="menu">
 
             <li>
-                <a href="#Sevilla">Sevilla</a>
-                <ul class="submenu">
+                <a href="#Sevilla" class="visual">Sevilla</a>
+                <ul class="submenuarriba">
                     <li><a href="#FosaCasariche">Fosa de Casariche</a></li>
                 </ul>
             </li>
 
 
             <li>
-                <a href="#Cordoba">Córdoba</a>
-                <ul class="submenu">
+                <a href="#Cordoba" class="visual">Córdoba</a>
+                <ul class="submenuarriba">
                     <li><a href="#FosaFuenteObejuna">Fosa de Fuente Obejuna</a></li>
                 </ul>
             </li>
             
            
             <li>
-                <a href="#Malaga">Málaga</a>
-                <ul class="submenu">
+                <a href="#Malaga" class="visual">Málaga</a>
+                <ul class="submenuarriba">
                     <li><a href="#FosaYunquera">Fosa de Yunquera</a></li>
                 </ul>
             </li>
             
             <li>
-                <a href="#Cadiz">Cádiz</a>
-                <ul class="submenu">
+                <a href="#Cadiz" class="visual">Cádiz</a>
+                <ul class="submenuarriba">
                     <li><a href="#FosaSanJosedelValle">Fosa de San José del Valle</a></li>
                 </ul>
             </li>
             
             <li>
-                <a href="#Granada">Granada</a>
-                <ul class="submenu">
+                <a href="#Granada" class="visual">Granada</a>
+                <ul class="submenuarriba">
                     <li><a href="#FosaPolopos">Fosa de Polopos</a></li>
                 </ul>
             </li>
             
             <li>
-                <a href="#Jaen">Jaén</a>
-                <ul class="submenu">
+                <a href="#Jaen" class="visual">Jaén</a>
+                <ul class="submenuarriba">
                     <li><a href="#FosaVillacarrillo">Fosa de Villacarrillo</a></li>
                 </ul>
             </li>
             
             <li>
-                <a href="#Almeria">Almería</a>
-                <ul class="submenu">
+                <a href="#Almeria" class="visual">Almería</a>
+                <ul class="submenuarriba">
                     <li><a href="#Fosa2Almeria">Fosa 2 de Almería</a></li>
                 </ul>
             </li>
             
             <li>
-                <a href="#Huelva">Huelva</a>
-                <ul class="submenu">
+                <a href="#Huelva" class="visual">Huelva</a>
+                <ul class="submenuarriba">
                     <li><a href="#FosaArroyomolinos">Fosa de Arroyomolinos de León</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
 </header>
-        <button class="openbtn" onclick="toggleNav()">☰ Abrir Menú</button>
+    <button class="menu-toggle-btn" aria-label="Abrir Menú">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+</button>
+<div class="lateral-menu-wrapper">
+    <nav id="menudesplegable" class="menu-lateral">
+        <ul class="menudesplegable">
 
-    <!-- Contenedor del menú lateral (sidebar) -->
-    <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">× Cerrar</a>
-        
-        <nav id="desplegable">
-            <ul class="main-menu">
-                <li>
-                    <a href="#Sevilla">Sevilla</a>
-                    <ul class="submenu">
-                        <li><a href="#FosaCasariche">Fosa de Casariche</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#Cordoba">Córdoba</a>
-                    <ul class="submenu">
-                        <li><a href="#FosaFuenteObejuna">Fosa de Fuente Obejuna</a></li>
-                    </ul>
-                </li>
-                <!-- El resto de elementos siguen la misma estructura anidada -->
-                <li>
-                    <a href="#Malaga">Málaga</a>
-                    <ul class="submenu">
-                        <li><a href="#FosaYunquera">Fosa de Yunquera</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#Cadiz">Cádiz</a>
-                    <ul class="submenu">
-                        <li><a href="#FosaSanJosedelValle">Fosa de San José del Valle</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#Granada">Granada</a>
-                    <ul class="submenu">
-                        <li><a href="#FosaPolopos">Fosa de Polopos</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#Jaen">Jaén</a>
-                    <ul class="submenu">
-                        <li><a href="#FosaVillacarrillo">Fosa de Villacarrillo</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#Almeria">Almería</a>
-                    <ul class="submenu">
-                        <li><a href="#Fosa2Almeria">Fosa 2 de Almería</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#Huelva">Huelva</a>
-                    <ul class="submenu">
-                        <li><a href="#FosaArroyomolinos">Fosa de Arroyomolinos de León</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </div>
+            <li>
+                <a href="#Sevilla" class="visual">Sevilla</a>
+                <ul class="submenu">
+                    <li><a href="#FosaCasariche">Fosa de Casariche</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#Cordoba" class="visual">Córdoba</a>
+                <ul class="submenu">
+                    <li><a href="#FosaFuenteObejuna">Fosa de Fuente Obejuna</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="#Malaga" class="visual">Málaga</a>
+                <ul class="submenu">
+                    <li><a href="#FosaYunquera">Fosa de Yunquera</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="#Cadiz" class="visual">Cádiz</a>
+                <ul class="submenu">
+                    <li><a href="#FosaSanJosedelValle">Fosa de San José del Valle</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="#Granada" class="visual">Granada</a>
+                <ul class="submenu">
+                    <li><a href="#FosaPolopos">Fosa de Polopos</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="#Jaen" class="visual">Jaén</a>
+                <ul class="submenu">
+                    <li><a href="#FosaVillacarrillo">Fosa de Villacarrillo</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="#Almeria" class="visual">Almería</a>
+                <ul class="submenu">
+                    <li><a href="#Fosa2Almeria">Fosa 2 de Almería</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="#Huelva" class="visual">Huelva</a>
+                <ul class="submenu">
+                    <li><a href="#FosaArroyomolinos">Fosa de Arroyomolinos de León</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
         <h1 id="tituloGeneral">Fosas Comunes de Andalucía</h1>
         <div class="bloque" id="intro">
             <p>En Andalucía, España, existen numerosas fosas comunes que datan de la Guerra Civil Española (1936-1939) y la posterior dictadura franquista. Estas fosas contienen los restos de miles de personas que fueron víctimas de ejecuciones extrajudiciales y represalias políticas durante y después del conflicto. Muchas de estas fosas permanecen sin identificar y sin exhumar, lo que ha generado un debate sobre la memoria histórica y la justicia para las víctimas y sus familias.</p>
