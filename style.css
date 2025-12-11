@@ -97,6 +97,7 @@ html{
     background-color:#333;
     padding: 10px;
 }
+
 .almeria{
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
     url(Banderas/BanderaAlmeria.png);
@@ -132,7 +133,7 @@ html{
 .tituloFosas{
     text-align:center;
     font-size: 70px;
-    background-color: purple;
+    background: linear-gradient(rgba(97, 2, 105, 0.75), rgba(151, 4, 4, 0.75));
     font-style: italic;
     font-weight: bold;
     color: white;
@@ -375,16 +376,19 @@ header {
     color: white;
     margin-top: 20px;
     padding: 10px 20px;
+    border-radius: 20px;
 }
 
 .footer-left img{
     width: 100%;
     height: auto;
-    background-color: white;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(255, 255, 255, 0.2)), black;
+    border-radius: 20px;
+    padding: 2%;
 } 
 
 .footer-right {
-    text-align: right;        /* Alinea el texto hacia la derecha */
+    text-align: right;
 }
 
 .footer-right p {
